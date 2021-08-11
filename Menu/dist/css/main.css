@@ -208,11 +208,26 @@ body {
   position: relative;
   overflow: hidden;
 }
+@media (min-width: 758px) {
+  .carousel {
+    width: 100%;
+  }
+}
 .carousel__slider {
   height: 100%;
   display: flex;
   width: 400%;
   transition: all 0.3s;
+}
+@media (min-width: 768px) {
+  .carousel__slider {
+    width: 200%;
+  }
+}
+@media (min-width: 1366px) {
+  .carousel__slider {
+    width: 130%;
+  }
 }
 .carousel__slider div {
   flex-basis: 100%;
@@ -271,6 +286,16 @@ body {
   margin: 2px;
   cursor: pointer;
 }
+@media (min-width: 1366px) {
+  .control__manual-button:nth-child(3) {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .control__manual-button:last-child {
+    display: none;
+  }
+}
 
 .left {
   left: 5px;
@@ -295,7 +320,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
   background: white;
 }
 
