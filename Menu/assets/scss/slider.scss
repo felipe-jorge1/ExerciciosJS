@@ -10,12 +10,24 @@ body{
     height: 100%;
     position: relative;
     overflow: hidden;
+
+    @media (min-width: 758px) {
+        width: 100%;
+    }
     
     &__slider{
         height: 100%;
         display: flex;
         width: 400%;
         transition: all .3s;
+
+        @media (min-width: 768px) {
+            width: 200%;
+        }
+
+        @media (min-width: 1366px) {
+            width: 130%;
+        }
 
         & div{
             flex-basis: 100%;
@@ -83,6 +95,18 @@ body{
             border-radius: 50px;
             margin: 2px;
             cursor: pointer;
+
+            &:nth-child(3){
+            @media (min-width: 1366px) {
+                display: none;
+                }
+            }
+
+            &:last-child{
+            @media (min-width: 768px) {
+                display: none;
+                }
+            }
         }
     }
 }
