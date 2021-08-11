@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.carousel{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    &__slider{
+        height: 100%;
+        display: flex;
+        width: 400%;
+        transition: all .3s;
+
+        & div{
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 20px;
+            height: 450px;
+            border: 2px solid #40404b;
+            border-radius: 5px;
+            padding: 60px 0 20px 0;
+            margin: 0 50px 50px;
+        }
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0 0;
+
+    &__box{
+
+        &-icon{
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+        }
+
+        &-text{
+            text-align: center;
+            font-size: 13px;
+            padding: 80px 20px 0 20px;
+        }
+
+        &-name{
+            font-size: 18px;
+            padding-top: 20px;
+        }
+    }
+}
+
+.control {
+    & .arrow{
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+    }
+
+    &__manual{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+
+        &-button{
+            width: 15px;
+            height: 15px;
+            border: 2px solid #40404b;
+            border-radius: 50px;
+            margin: 2px;
+            cursor: pointer;
+        }
+    }
+}
+
+.left{
+    left: 5px;
+}
+
+.right{
+    right: 10px;
+}
+
+.selected{
+    background: #40404b;
+}

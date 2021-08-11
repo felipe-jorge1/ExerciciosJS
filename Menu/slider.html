@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Card slider</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="/index.html">Menu</a>
+        <nav id="nav" class="menu">
+            <button id="btn-mobile" class="menu__button"><span class="menu__button-hamburger"></span></button>
+            <ul class="menu__selector">
+                <li class="menu__selector-btn"><a href="/index.html">Home</a></li>
+                <li class="menu__selector-btn"><a href="/tabs.html">Tabs</a></li>
+                <li class="menu__selector-btn"><a href="/slider.html">Slider</a></li>
+                <li class="menu__selector-btn"><a href="/accordion.html">Accordion</a></li>
+            </ul>
+        </nav>
+    </header>
+        <script src="dist/js/script.js"></script>
+
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel__slider">
+                <div class="container__box">
+                    <img src="assets/images/1.jpg" class="container__box-icon">
+                    <p class="container__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus dui in imperdiet gravida. Proin iaculis ornare lacus nec posuere.</p>
+                    <h3 class="container__box-name">Gatito</h3>
+                </div>
+
+                <div class="container__box">
+                    <img src="assets/images/2.jpg" class="container__box-icon">
+                    <p class="container__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus dui in imperdiet gravida. Proin iaculis ornare lacus nec posuere.</p>
+                    <h3 class="container__box-name">Gatito</h3>
+                </div>
+
+                <div class="container__box">
+                    <img src="assets/images/3.jpg" class="container__box-icon">
+                    <p class="container__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus dui in imperdiet gravida. Proin iaculis ornare lacus nec posuere.</p>
+                    <h3 class="container__box-name">Gatito</h3>
+                </div>
+
+                <div class="container__box">
+                    <img src="assets/images/4.jpg" class="container__box-icon">
+                    <p class="container__box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus dui in imperdiet gravida. Proin iaculis ornare lacus nec posuere.</p>
+                    <h3 class="container__box-name">Gatito</h3>
+                </div>
+            </div>
+
+            <div class="control">
+                <span class="arrow right"><i class="material-icons">keyboard_arrow_right</i></span>
+                <span class="arrow left"><i class="material-icons">keyboard_arrow_left</i></span>
+                <ul class="control__manual">
+                    <li class="control__manual-button selected"></li>
+                    <li class="control__manual-button"></li>
+                    <li class="control__manual-button"></li>
+                    <li class="control__manual-button"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="dist/js/slider.js"></script>
+</body>
+</html>

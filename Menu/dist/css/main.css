@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ccc;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu__button {
+  display: none;
+}
+@media (max-width: 500px) {
+  .menu__button {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+}
+.menu__button-hamburger {
+  border-top: 2px solid;
+  width: 20px;
+}
+.menu__button-hamburger::after, .menu__button-hamburger::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1.9px;
+  background: currentColor;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: relative;
+}
+.menu__selector {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+@media (max-width: 500px) {
+  .menu__selector {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0;
+    background: #ccc;
+    height: 0;
+    transition: 0.6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+}
+.menu__selector a {
+  display: block;
+  padding: 0.5rem;
+}
+@media (max-width: 500px) {
+  .menu__selector a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 1px solid #aaaaaa;
+  }
+}
+.menu__selector-btn:hover {
+  background: #aaaaaa;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  .active .menu__selector {
+    height: calc(100vh - 70px);
+    visibility: visible;
+  }
+}
+
+.active .menu__button-hamburger {
+  border-top-color: transparent;
+}
+.active .menu__button-hamburger::after {
+  transform: rotate(135deg);
+}
+.active .menu__button-hamburger::before {
+  transform: rotate(-135deg);
+  top: 6px;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.tabs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 430px;
+}
+.tabs__header {
+  background: white;
+  padding: 10px 10px 0 10px;
+  display: flex;
+  border-radius: 10px 10px 0 0;
+}
+.tabs__header > div {
+  position: relative;
+  width: 25%;
+  text-align: center;
+  padding: 10px 10px 4px 10px;
+  z-index: 2;
+  font-weight: 600;
+  color: #686868;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.tabs__header > div.active {
+  color: #387be2;
+}
+.tabs__selector {
+  position: absolute;
+  width: calc(33.3% - 42px);
+  height: 40px;
+  border: 2px solid #ccc;
+  border-bottom: 6px solid white;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+  transition: all 300ms ease-in-out;
+}
+.tabs__body {
+  position: relative;
+  padding: 0 10px 10px;
+  background: white;
+  border: 2px solid #ddd;
+  height: calc(100% - 50px);
+  overflow: hidden;
+  border-radius: 5px;
+  z-index: -1;
+}
+.tabs__body > div {
+  position: absolute;
+  opacity: 0;
+  top: -100%;
+  transform: translateY(10px);
+}
+.tabs__body > div.active {
+  transform: translateY(0px);
+  top: 30px;
+  opacity: 1;
+}
+.tabs__body p {
+  color: #555;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.carousel {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel__slider {
+  height: 100%;
+  display: flex;
+  width: 400%;
+  transition: all 0.3s;
+}
+.carousel__slider div {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20px;
+  height: 450px;
+  border: 2px solid #40404b;
+  border-radius: 5px;
+  padding: 60px 0 20px 0;
+  margin: 0 50px 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 0 0;
+}
+.container__box-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+}
+.container__box-text {
+  text-align: center;
+  font-size: 13px;
+  padding: 80px 20px 0 20px;
+}
+.container__box-name {
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.control .arrow {
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+}
+.control__manual {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.control__manual-button {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #40404b;
+  border-radius: 50px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.left {
+  left: 5px;
+}
+
+.right {
+  right: 10px;
+}
+
+.selected {
+  background: #40404b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.accordion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+}
+
+.accordion {
+  width: 800px;
+  padding: 15px 0 10px;
+}
+.accordion__title {
+  font-size: 18px;
+  margin-left: 18px;
+}
+.accordion__content-box {
+  position: relative;
+  margin: 10px 20px;
+}
+.accordion__content {
+  position: relative;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.accordion__label {
+  position: relative;
+  padding: 10px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  border: 2px solid #ccc8c8;
+  border-radius: 10px;
+}
+.accordion__label:before {
+  content: "+";
+  color: black;
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+.accordion__content-box.active .accordion__label:before {
+  content: "-";
+  color: black;
+}
+.accordion__content-box.active .accordion__content {
+  height: 185px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=main.css.map */
