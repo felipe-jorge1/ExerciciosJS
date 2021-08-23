@@ -76,6 +76,10 @@ body{
     position: absolute;
     top: 45%;
     cursor: pointer;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
 
     &__manual{
@@ -112,7 +116,7 @@ body{
 }
 
 .left{
-    left: 5px;
+    left: 7.5px;
 }
 
 .right{
